@@ -8,9 +8,13 @@ const routes: Routes = [
   },
   {
     path: 'tab4',
-    loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
+    loadChildren: () => import('./tab4/tab4.module').then(m => m.Tab4PageModule)
   },
-  
+  {
+    path: 'splash',
+    loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
+  },
+
 ];
 @NgModule({
   imports: [
@@ -18,4 +22,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
